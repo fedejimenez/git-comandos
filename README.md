@@ -31,12 +31,12 @@ Este es uno de los comandos más básicos. Un simple push envía los cambios que
 
 #### git push  origin master
 
-__________________
+________________________________________________________________________________________________
 ### git checkout
 El comando checkout se puede usar para crear ramas o cambiar entre ellas. Por ejemplo, el siguiente comando crea una nueva y se cambia a ella: `git checkout -b <branch-name>`
 
 Para cambiar de una rama a otra solo usa: `git checkout <branch-name>`
-___________________________________________________
+________________________________________________________________________________________________
   
 ### git remote -v
 El comando git se usa para conectar a un repositorio remoto. El siguiente comando muestra los repositorios remotos que están configurados actualmente:
@@ -48,15 +48,22 @@ Este comando se usa para listar, crear o borrar ramas. Para listar todas las ram
 para borrar la rama:
 
 `git branch -D <branch-name>`
- ____________________________________________
+________________________________________________________________________________________________
   
 ### git pull
 Para poder fusionar todos los cambios que se han hecho en el repositorio local trabajando.
+
+### git fetch
+Este comando le permite al usuario buscar todos los objetos de un repositorio remoto que actualmente no reside en el directorio local que está trabajando.
 
 ### git merge
 Este comando se usa para fusionar una rama con otra rama activa:
 `git merge <branch-name>`
   
+### git reset
+Para resetear el index y el directorio que está trabajando al último estado comprometido se usa este comando:
+`git reset --hard HEAD`
+
 ### git diff
 Este comando se usa para hacer una lista de conflictos. Para poder ver conflictos con el archivo base usa:
 `git diff --base <file-name>`
@@ -65,32 +72,34 @@ El siguiente comando se usa para ver los conflictos que hay entre ramas que est�
 
 `git diff <source-branch> <target-branch>`
 
+________________________________________________________________________________________________
+
 ### git tag
 Etiquetar se usa para marcar commits específicos con asas simples. 
 Por ejemplo: `git tag 1.1.0 <instert-commitID-here>`
 
 #### Subir los tags
 Ejecutar: `git push --tags`
-  
+
+________________________________________________________________________________________________
+
 ### git log
 Ejecutar este comando muestra una lista de commits en una rama junto con todos los detalles.
 
-### git reset
-Para resetear el index y el directorio que está trabajando al último estado comprometido se usa este comando:
-`git reset --hard HEAD`
+### git show
+Se usa para mostrar información sobre cualquier objeto git.
+
+________________________________________________________________________________________________
 
 ### git rm
 Este comando se puede usar para remover archivos del index y del directorio que está trabajando:
 git rm filename.txt
 
+
 ### git stash
 Este es uno de los comandos menos conocidos, pero ayuda a salvar cambios que no están por ser comprometidos inmediatamente, pero temporalmente:
 
-### git show
-Se usa para mostrar información sobre cualquier objeto git.
-
-### git fetch
-Este comando le permite al usuario buscar todos los objetos de un repositorio remoto que actualmente no reside en el directorio local que está trabajando.
+________________________________________________________________________________________________
 
 ### git reflog
 
